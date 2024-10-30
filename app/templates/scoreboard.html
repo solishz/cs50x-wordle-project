@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Scoreboard
+{% endblock title %}
+
+{% block main %}
+<div class="container">
+    <h1 class="mt-4">Scoreboard</h1>
+    <h4 class="mt-2">Scores reset daily</h4>
+    {% if user_score %}
+        <div class="container">
+            <h6>Your Score : {{ user_score.score }}<h6>         
+        </div>
+    {% endif %}
+    {% if scores %}
+        <table class="table table-dark table-striped mt-4">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Username</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for score in scores %}
+                    <tr>
+                        <td>{{ score.rank }}</td>
+                        <td>{{ score.username }}</td>
+                        <td>{{ score.score }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <div class="container mt-5">
+            <h4>There are no scores</h4>
+        </div>
+    {% endif %}
+</div>
+{% endblock main %}

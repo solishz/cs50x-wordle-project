@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    How to play
+{% endblock title %}
+
+{% block main %}
+    <div class="container mt-5" style="width:70%">
+        <h2>How to Play Wordle:</h2>
+        <ol class="mt-4">
+            <li><strong>Guess the Word:</strong> You have six chances to guess the hidden five-letter word.</li>
+            <li><strong>Enter Your Guess:</strong> Type a five-letter word and press "Enter" to submit.</li>
+            <li><strong>Color Feedback:</strong>
+                <ul>
+                    <li><span style="color: green;"><strong>Green</strong></span> letters are correct and in the right position.</li>
+                    <li><span style="color: goldenrod;"><strong>Yellow</strong></span> letters are in the word but in the wrong position.</li>
+                    <li><span style="color: gray;"><strong>Gray</strong></span> letters are not in the word at all.</li>
+                </ul>
+            </li>
+            <li><strong>Use Hints:</strong> Use the feedback from each guess to refine your next attempt.</li>
+            <li><strong>Win or Lose:</strong> If you guess the word within six tries, you win! If not, better luck next time!</li>
+        </ol>
+        <p>Good luck, and have fun!</p>
+    </div>
+{% endblock main %}

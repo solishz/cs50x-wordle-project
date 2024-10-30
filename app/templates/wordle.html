@@ -1,0 +1,108 @@
+{% extends "index.html" %}
+
+{% block wordle %}
+    <div class="container text-center mt-5">
+        <!-- Wordle svg -->
+        <div class="container">
+            <svg id="exFk43WmeIg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 75 30" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" project-id="a9a95e9fa367417bbdcb060c8cbf8ad2" export-id="d444f13c060d45bb999cc834fce2345e" cached="false" width="75" height="30"><defs><filter id="exFk43WmeIg2-filter" x="-150%" width="400%" y="-150%" height="400%"><feGaussianBlur id="exFk43WmeIg2-filter-drop-shadow-0-blur" in="SourceAlpha" stdDeviation="0,0"/><feOffset id="exFk43WmeIg2-filter-drop-shadow-0-offset" dx="2" dy="1" result="tmp"/><feFlood id="exFk43WmeIg2-filter-drop-shadow-0-flood" flood-color="#5e4d83"/><feComposite id="exFk43WmeIg2-filter-drop-shadow-0-composite" operator="in" in2="tmp"/><feMerge id="exFk43WmeIg2-filter-drop-shadow-0-merge" result="result"><feMergeNode id="exFk43WmeIg2-filter-drop-shadow-0-merge-node-1"/><feMergeNode id="exFk43WmeIg2-filter-drop-shadow-0-merge-node-2" in="SourceGraphic"/></feMerge><feColorMatrix id="exFk43WmeIg2-filter-sepia-0" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" result="result"/></filter></defs><text dx="0" dy="0" font-family="&quot;exFk43WmeIg1:::Prompt&quot;" font-size="20" font-weight="800" letter-spacing="1" transform="matrix(.92942 0 0 1 1.950359 21.578918)" filter="url(#exFk43WmeIg2-filter)" fill="#d7b7e8" stroke="#4b0a65"><tspan y="0" font-weight="800"><![CDATA[
+                Wordle
+                ]]></tspan></text>
+                <style><![CDATA[
+                @font-face {font-family: 'exFk43WmeIg1:::Prompt';font-style: normal;font-weight: 800;src: url(https://fonts.gstatic.com/l/font?kit=-W_8XJnvUD7dzB2Cx_w4bnEtLPFAGk1D&skey=89ea937e03323c30&v=v10) format('truetype');}
+                ]]></style>
+            </svg>
+        </div>
+        {% if start %}
+            <!-- Wordle Grid -->
+            <div class="wordle-grid">
+                <div class="wordle-tile row1" id="tile-1-1"></div>
+                <div class="wordle-tile row1" id="tile-1-2"></div>
+                <div class="wordle-tile row1" id="tile-1-3"></div>
+                <div class="wordle-tile row1" id="tile-1-4"></div>
+                <div class="wordle-tile row1" id="tile-1-5"></div>
+
+                <div class="wordle-tile row2" id="tile-2-1"></div>
+                <div class="wordle-tile row2" id="tile-2-2"></div>
+                <div class="wordle-tile row2" id="tile-2-3"></div>
+                <div class="wordle-tile row2" id="tile-2-4"></div>
+                <div class="wordle-tile row2" id="tile-2-5"></div>
+
+                <div class="wordle-tile row3" id="tile-3-1"></div>
+                <div class="wordle-tile row3" id="tile-3-2"></div>
+                <div class="wordle-tile row3" id="tile-3-3"></div>
+                <div class="wordle-tile row3" id="tile-3-4"></div>
+                <div class="wordle-tile row3" id="tile-3-5"></div>
+
+                <div class="wordle-tile row4" id="tile-4-1"></div>
+                <div class="wordle-tile row4" id="tile-4-2"></div>
+                <div class="wordle-tile row4" id="tile-4-3"></div>
+                <div class="wordle-tile row4" id="tile-4-4"></div>
+                <div class="wordle-tile row4" id="tile-4-5"></div>
+
+                <div class="wordle-tile row5" id="tile-5-1"></div>
+                <div class="wordle-tile row5" id="tile-5-2"></div>
+                <div class="wordle-tile row5" id="tile-5-3"></div>
+                <div class="wordle-tile row5" id="tile-5-4"></div>
+                <div class="wordle-tile row5" id="tile-5-5"></div>
+
+                <div class="wordle-tile row6" id="tile-6-1"></div>
+                <div class="wordle-tile row6" id="tile-6-2"></div>
+                <div class="wordle-tile row6" id="tile-6-3"></div>
+                <div class="wordle-tile row6" id="tile-6-4"></div>
+                <div class="wordle-tile row6" id="tile-6-5"></div>
+            </div>
+
+            <!-- Keyboard for input -->
+            <div class="keyboard container">
+                <div class="keyboard-row">
+                    <button class="keyboard-key">Q</button>
+                    <button class="keyboard-key">W</button>
+                    <button class="keyboard-key">E</button>
+                    <button class="keyboard-key">R</button>
+                    <button class="keyboard-key">T</button>
+                    <button class="keyboard-key">Y</button>
+                    <button class="keyboard-key">U</button>
+                    <button class="keyboard-key">I</button>
+                    <button class="keyboard-key">O</button>
+                    <button class="keyboard-key">P</button>
+                </div>
+                
+                <!-- Second row -->
+                <div class="keyboard-row">
+                    <button class="keyboard-key">A</button>
+                    <button class="keyboard-key">S</button>
+                    <button class="keyboard-key">D</button>
+                    <button class="keyboard-key">F</button>
+                    <button class="keyboard-key">G</button>
+                    <button class="keyboard-key">H</button>
+                    <button class="keyboard-key">J</button>
+                    <button class="keyboard-key">K</button>
+                    <button class="keyboard-key">L</button>
+                </div>
+                
+                <!-- Third row -->
+                <div class="keyboard-row">
+                    <button class="keyboard-key">Z</button>
+                    <button class="keyboard-key">X</button>
+                    <button class="keyboard-key">C</button>
+                    <button class="keyboard-key">V</button>
+                    <button class="keyboard-key">B</button>
+                    <button class="keyboard-key">N</button>
+                    <button class="keyboard-key">M</button>
+                    <button class="keyboard-key" type="submit" name="Enter" value="Enter" id="submit-start">Enter</button>
+                    <button class="keyboard-key">⌫</button>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <h1 class="container mt-5">Welcome to the Wordle Game</h1>
+        <p class="container mt-3">Press play to start playing!</p>
+        <form action="/" method="get">
+            <button class="btn mt-5 start-button" type="submit" name="start" value="1">Play</button>
+        </form>
+        <form action="/how-to-play" method="get">
+            <button class="btn mt-3 htp-btn" type="submit">How to play</button>
+        </form>
+    {% endif %}
+    
+{% endblock %}
