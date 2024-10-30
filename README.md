@@ -1,6 +1,7 @@
 # Wordle Game
 
 This is a Wordle clone built with Flask, HTML, CSS, JavaScript, and Bootstrap as a final project for CS50x.
+## Video Demo:  https://youtu.be/7YiI3JL3CuM
 
 ## Features
 - User authentication to track player scores
